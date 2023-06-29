@@ -8,7 +8,7 @@ def Freundlich (C, K, n):
 def Langmuir (C, K, qm):
     return qm * K * C / (1 + K * C)
 
-xdata = np.linspace(0, 4, 50)
+xdata = np.linspace(1, 4, 50)
 
 ydata = Freundlich(xdata, 1, 0.6) + 0.1 * np.random.default_rng().normal(size=xdata.size)
 
@@ -27,4 +27,4 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.show()
-print ('done')
+print (pcov_freundlich)
